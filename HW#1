@@ -1,0 +1,205 @@
+
+#                Northwestern Polytechnic University
+
+#Python Programming
+#Homework Assignment #1
+#Due day: 1/30/2021
+
+#Instruction: 
+
+#1.	Push the source code to Github or answer sheet in word file
+#2.	Please follow the code style rule like programs on handout.
+#3.	Overdue homework submission could not be accepted.
+#4.  Takes academic honesty and integrity seriously (Zero Tolerance of Cheating & Plagiarism)
+
+
+#Homework Question#:
+
+#1.	What would you get from the following statements? And explain WHY?
+
+True and 1 / 0 and False
+# Answer: False  with entered 1
+# Anwers: 0 with entered 0
+
+True or 1 / 0 or False
+# Answer: True  with entered 1
+# Anwers: True with entered 0
+
+True and 0
+# Answer: 0  with entered 0
+# Anwers: 1 with entered 1
+
+False or 1
+# Answer: 1 with entered 1
+# Anwers: 0 with entered 0
+
+1 and 3 and 6 and 10 and 15
+# Answer: 15  after running, whichever number is last will display it
+
+0 or False or 2 or 1 / 0
+# Answer: 2  with entered 1
+# Anwers: 2 with entered 0
+
+
+#2. What is result when the following program is executed? And explain WHY?
+
+def welcome():
+print('Welcome to', end=' ')
+return 'Hello'
+
+def IT310():
+print('IT310')
+return 'Python'
+
+print(welcome(), IT310())
+______
+Answer:
+    Welcome to IT310
+    Hello Python        # Not sure how this print shows?
+
+
+#3  What would Python print? And explain WHY?
+
+x = 6
+def foo1(x):
+print(x)
+
+def foo2(x):
+y = x
+x = 7
+print(x)
+
+y = foo1(x)
+______
+# Answer: 6  
+
+foo2(x)
+______
+# Answer: 7  
+
+y + foo1(8)
+______
+# Answer: 8  but an error show up; a TypeError  
+# TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+
+
+#4. What can you find after running?
+
+from operator import sub, mul 
+
+def print_sub(x, y): 
+print('sub') 
+return sub(x, y)
+
+def print_mul(x, y):
+print('mul') 
+return mul(x, y)
+
+print_sub(print_mul(4, 504), 2)
+
+a = print_sub(print_mul(4, 504), 2)
+    ______
+    #Answer:
+        mul
+        sub
+        mul
+        sub
+            
+#5  Create a function to add odd numbers less equal than numeric input parameter together as follows
+
+def sum_odd(n):
+  sum = 0
+  for i in range (1, n+1, 2):
+    sum +=i
+  return sum
+
+#sum_odd(6)		#1+3+5
+9
+sum_odd(7)		#1+3+5+7
+16
+
+#6  Define a function for 4 inputs a, b, c, d, and return sum of square of two smallest number from 
+#   a, b, c and d, such as
+
+      
+
+def  foo1(a, b, c, d):
+  s = min(a, b, c, d)
+
+#  print(f)
+
+  k2 = ((pow(s),2)
+  print(k2)
+  return s
+
+def foo(numbers):
+  m1, m2 = float('inf'), float('inf')
+  for x in numbers:
+    if x <= m1:
+      m1, m2 = x, m1
+    elif x < m2:
+      m2 = x
+
+  k1 = (pow(m2),2))
+  print(m2) 
+  return m2
+
+
+
+foo1(1, 2, 3, 4)		
+		5 				# 1^2+ 2^2=5
+foo([-3, 1, 5, 6])	
+10				# 〖(-3)〗^2+ 1^2=10
+
+#7  Write a function named "df" that takes three integers x, y, and z. It returns whether subtracting 
+#   one of these numbers from another gives the third or not
+
+def df(x,y,z):
+
+        #adding elements to list
+    li = [x, y, z]
+        #sorting list
+    li.sort()
+    
+    if (li[2]==li[0]+li[1]):
+        return True
+    else:
+        return False
+
+print('Enter 3 numbers:') 
+x = float(input())
+y = float(input())
+z = float(input())
+  
+print(df(x,y,z))
+
+
+
+    df(5, 3, 2) 		# 5 - 3 is 2
+True
+
+    df(2, 3, 5) 		# 5 - 3 is 2
+True
+
+    df(2, 5, 3) 		# 5 - 3 is 2
+True
+
+    df(-2, 3, 5) 		# 3 - 5 is -2
+True
+
+    df(-5, -3, -2) 	# -5 - -2 is -3
+True
+
+    df(-2, 3, -5) 		# -2 - 3 is -5
+True
+
+    df(2, 3, -5)
+False
+
+    df(10, 6, 4)
+True
+
+    df(10, 6, 3)
+False
+
+
